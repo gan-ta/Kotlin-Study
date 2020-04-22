@@ -1,8 +1,10 @@
 package com.example.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,6 +13,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         Log.d("life_cycle" , "onCreate")
+
+        next_btn1.setOnClickListener {
+            val intent = Intent(this@MainActivity, IntentActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onStart() {
@@ -37,4 +44,6 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         Log.d("life_cycle","onDestroy")
     }
+
+
 }
