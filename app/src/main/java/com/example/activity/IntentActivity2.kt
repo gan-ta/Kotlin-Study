@@ -36,8 +36,8 @@ class IntentActivity2 : AppCompatActivity() {
             //누름과 동시에 로컬 데이터베이스에 저장을 시켜줌
             realm.executeTransaction{
                 with(it.createObject(Person::class.java)){
-                    this.name = "userName"
-                    this.number = "userNumber"
+                    this.name = userName
+                    this.number = userNumber
                 }
             }
 

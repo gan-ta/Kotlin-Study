@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/main1">
+
 
     <TextView
         android:layout_gravity="center_horizontal"
@@ -33,7 +35,5 @@
         android:layout_marginTop="200dp"
         android:layout_marginRight="50dp"
         android:text="이동" />
-
-
 
 </LinearLayout>

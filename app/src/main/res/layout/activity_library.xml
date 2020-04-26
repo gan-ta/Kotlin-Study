@@ -5,50 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".FragmentActivity">
+    tools:context=".LibraryActivity">
 
     <TextView
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fragment연습 창입니다."
+        android:text="Library 연습 창입니다."
         android:layout_marginTop="100dp"
         android:textSize="30dp"
         />
 
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="(Glide)" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="50dp"
-        android:layout_gravity="center_horizontal"
-        >
-        <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:id="@+id/pop_btn"
-            android:text="POP"/>
+        android:layout_marginTop="50dp">
 
-        <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:id="@+id/delete_btn"
-            android:text="Delete"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/segment"
+    <ImageView
+        android:id="@+id/glide"
         android:layout_height="200dp"
-        android:layout_width="match_parent"
-        android:layout_marginTop="30dp"
-        android:orientation="vertical"
-        android:background="#FFFFFF">
+        android:layout_width="200dp"/>
+
+    <ImageView
+        android:id="@+id/glide2"
+        android:layout_height="200dp"
+        android:layout_width="200dp"
+        android:layout_marginLeft="10dp"/>
     </LinearLayout>
 
     <Button
-        android:id="@+id/next_btn3"
+        android:id="@+id/next_btn4"
         android:layout_gravity="right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -56,7 +51,5 @@
         android:layout_marginTop="50dp"
         android:layout_marginRight="50dp"
         android:text="이동" />
-
-
 
 </LinearLayout>

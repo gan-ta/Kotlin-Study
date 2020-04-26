@@ -1,5 +1,6 @@
 package com.example.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.TokenWatcher
@@ -53,6 +54,10 @@ class FragmentActivity : AppCompatActivity(),FragmentSegment.OnDatapassListener 
             fragmentTransaction.commit()
         }
 
+        next_btn3.setOnClickListener {
+            val intent = Intent(this@FragmentActivity,ThreadActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onStart() {

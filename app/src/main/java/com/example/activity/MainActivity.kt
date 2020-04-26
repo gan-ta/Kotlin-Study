@@ -1,9 +1,14 @@
 package com.example.activity
 
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.LinearLayout
+import androidx.core.view.ViewCompat.setBackground
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,6 +18,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         Log.d("life_cycle" , "onCreate")
+
+        //val mainView : View = findViewById(R.id.main1)
+        //mainView.setBackgroundResource(R.drawable.ic_launcher_foreground)
+
+        //val v : View = main1
+        // val image : Drawable? = getDrawable(R.drawable.background1)
 
         next_btn1.setOnClickListener {
             val intent = Intent(this@MainActivity, IntentActivity::class.java)
