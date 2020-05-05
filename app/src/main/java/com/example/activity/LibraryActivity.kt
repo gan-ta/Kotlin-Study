@@ -33,7 +33,7 @@ class LibraryActivity : AppCompatActivity() {
             .into(glide2)
 
         next_btn4.setOnClickListener {
-            val intent = Intent(this@LibraryActivity,AddViewActivity::class.java)
+            val intent = Intent(this@LibraryActivity,TabpagerActivity::class.java)
             startActivity(intent)
         }
 

@@ -3,6 +3,7 @@
     package="com.example.activity">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name = "android.permission.CAMERA"/>
 
     <application
         android:allowBackup="true"
@@ -11,22 +12,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RecyclerViewActivity"></activity>
-        <activity android:name=".TabpagerActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".ListViewActivity"></activity>
+        <activity android:name=".Permission"></activity>
+        <activity android:name=".NetworkActivity"></activity>
+        <activity android:name=".AsyncActivity" />
+        <activity android:name=".SharedPreferenceActivity" />
+        <activity android:name=".RecyclerViewActivity" />
+        <activity android:name=".TabpagerActivity" />
+        <activity android:name=".ListViewActivity" />
         <activity android:name=".AddViewActivity" />
         <activity android:name=".LibraryActivity" />
         <activity android:name=".ThreadActivity" />
         <activity android:name=".FragmentActivity" />
         <activity android:name=".IntentActivity2" />
         <activity android:name=".IntentActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

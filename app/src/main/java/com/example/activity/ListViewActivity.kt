@@ -1,12 +1,14 @@
 package com.example.activity
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -57,6 +59,12 @@ class ListViewActivity : Fragment() {
     //해당 fragment의 뷰 부분을 처리하고 싶을 땐 이 부분에서 처리
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val btn = view.findViewById<Button>(R.id.next_preference2)
+        btn.setOnClickListener {
+            val intent = Intent(view.context,SharedPreferenceActivity::class.java)
+            startActivity(intent)
+        }
 
         val adapter = ListViewAdapter(personList,inflater)
         listview_container.adapter = adapter

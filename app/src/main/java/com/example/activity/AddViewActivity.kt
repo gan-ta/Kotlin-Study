@@ -1,12 +1,14 @@
 package com.example.activity
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -59,6 +61,11 @@ class AddViewActivity : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val container = view.findViewById<LinearLayout>(R.id.addview_container)
+        val btn = view.findViewById<Button>(R.id.next_preference1)
+        btn.setOnClickListener {
+            val intent = Intent(view.context,SharedPreferenceActivity::class.java)
+            startActivity(intent)
+        }
 
         for (i in 0 until personList.size) {
             val itemView = inflater?.inflate(R.layout.person_item, null)//불힐 뷰를 생성하는 과정
@@ -69,6 +76,7 @@ class AddViewActivity : Fragment() {
             personNumberView?.setText(personList.get(i).number)
             container?.addView(itemView)
         }
+
     }
 
 }
